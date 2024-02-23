@@ -18,24 +18,28 @@ const app = express()
 require('dotenv').config()
 const PORT = process.env?.PORT || 8000
 
+/* ------------------------------------------------------- */
+
 //LOG 
 // npm i morgan
 // morgan is a middleware
-const morgan=require('morgan')
+// const morgan=require('morgan')
 // console.log(morgan);
 // app.use(morgan('combined'))
 // custom morgan
 // app.use(morgan('IP:remote-addr TIME:[:date[clf]] REQ:":method :url HTTP/:http-version" RES::status :res[content-length] APP:":user-agent"'))
 
 
-const fs = require('node:fs')// file system
+// const fs = require('node:fs')// file system
 
-const now = new Date()
-const today = now.toISOString().split('T')[0]
-console.log(today);
-app.use(morgan('combined', {
-    stream: fs.createWriteStream(`./logs/${today}.log`, { flags: 'a+' })
-}))
+// const now = new Date()
+// const today = now.toISOString().split('T')[0]
+// console.log(today);
+// app.use(morgan('combined', {
+//     stream: fs.createWriteStream(`./logs/${today}.log`, { flags: 'a+' })
+// }))
+
+/* ------------------------------------------------------- */
 
 // Documentation Middlewares:
 // npm i swagger-ui-express
